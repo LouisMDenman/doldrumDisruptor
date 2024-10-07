@@ -9,6 +9,8 @@ function App() {
   return (
     <>
       <h1>Doldrum Disruptor</h1>
+      <button>Button here</button>
+      <a>Link here</a>
     </>
   )
 }
