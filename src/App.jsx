@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useThemeContext } from './contexts/ThemeContextProvider'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [currentTheme, toggleTheme] = useThemeContext()
 
   return (
     <>
       <h1>Doldrum Disruptor</h1>
-      <button>Button here</button>
-      <a>Link here</a>
+      <button onClick={toggleTheme}>
+        Toggle Theme
+      </button>
     </>
   )
 }
