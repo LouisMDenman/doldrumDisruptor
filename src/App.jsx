@@ -1,4 +1,6 @@
 import './App.css'
+import './ActivityOutput.css'
+import { ActivityOutput } from './components/ActivityOutput'
 import { useThemeContext } from './contexts/ThemeContextProvider'
 
 function App() {
@@ -11,9 +13,7 @@ function App() {
         <h1>Doldrum Disruptor</h1>
       </header>
       <main>
-        <div id="output">
-          <p>PLACEHOLDER: OUTPUT WILL GO HERE</p>
-        </div>
+        <ActivityOutput />
         <div id="checkboxes">
           <div>
             <input type="checkbox" id="solo" name="solo"/>
