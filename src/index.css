@@ -39,6 +39,15 @@ h3 {
   color: light-dark(#F0F0F0, #1a1a1a);
 }
 
+label {
+  color: light-dark(#1a1a1a, #F0F0F0);
+  padding-right: 10px;
+}
+
+select {
+  color: light-dark(#1a1a1a, #F0F0F0);
+}
+
 button {
   border-radius: 8px;
   border: 2px solid transparent;

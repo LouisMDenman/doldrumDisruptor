@@ -1,0 +1,7 @@
+#selectors {
+    display: flex;
+    width: 30dvw;
+    height: 5dvh;
+    align-items: center;
+    justify-content: space-evenly;
+}

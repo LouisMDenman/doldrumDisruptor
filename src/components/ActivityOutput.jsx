@@ -3,7 +3,7 @@
 export function ActivityOutput() {
     let activityData = {"id":"0", "activity": "Bobsledding", "type": "social", "duration": "hours", "kidFriendly": "yes"}
 
-    if (activityData.id) {
+    if (false) {
         return (
             <div id="output">
                 <h3 id="activity">Activity: {activityData.activity}</h3>

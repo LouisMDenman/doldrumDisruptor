@@ -1,7 +1,9 @@
 import './App.css'
-import './ActivityOutput.css'
+import './styles/ActivityOutput.css'
+import './styles/ActivitySelectors.css'
 import { ActivityOutput } from './components/ActivityOutput'
 import { useThemeContext } from './contexts/ThemeContextProvider'
+import { ActivitySelectors } from './components/ActivitySelectors'
 
 function App() {
 
@@ -14,40 +16,7 @@ function App() {
       </header>
       <main>
         <ActivityOutput />
-        <div id="checkboxes">
-          <div>
-            <input type="checkbox" id="solo" name="solo"/>
-            <label for="solo">Solo Activity</label>
-          </div>
-          <div>
-            <input type="checkbox" id="social" name="social"/>
-            <label for="social">Social</label>
-          </div>
-          <div>
-            <input type="checkbox" id="recreational" name="recreational"/>
-            <label for="recreational">Recreational</label>
-          </div>
-          <div>
-            <input type="checkbox" id="educational" name="educational"/>
-            <label for="educational">Educational</label>
-          </div>
-          <div>
-            <input type="checkbox" id="relaxing" name="relaxing"/>
-            <label for="relaxing">Relaxing</label>
-          </div>
-          <div>
-            <input type="checkbox" id="charitable" name="charitable"/>
-            <label for="charitable">Charitable</label>
-          </div>
-          <div>
-            <input type="checkbox" id="cooking" name="cooking"/>
-            <label for="cooking">Cooking</label>
-          </div>
-          <div>
-            <input type="checkbox" id="work" name="work"/>
-            <label for="work">Work</label>
-          </div>
-        </div>
+        <ActivitySelectors />
         <button id="search">
           Find Activity
         </button>

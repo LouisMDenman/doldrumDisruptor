@@ -2,7 +2,9 @@
     width: 70dvh;
     height: 40dvh;
     background-color: light-dark(#002147, #F0F0F0);
-    border-radius: 2%;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: light-dark(#1a1a1a, #00FFFF);
     display: flex;
     flex-direction: column;
     justify-content: center;
