@@ -11,3 +11,9 @@
     align-items: center;
 }
 
+#buttondiv {
+    height:5dvh;
+    display: flex;
+    align-items: center;
+}
+

@@ -15,11 +15,8 @@ function App() {
         <h1>Doldrum Disruptor</h1>
       </header>
       <main>
-        <ActivityOutput />
         <ActivitySelectors />
-        <button id="search">
-          Find Activity
-        </button>
+        <ActivityOutput />
       </main>
       <footer>
         <button id="theme" onClick={toggleTheme}>
