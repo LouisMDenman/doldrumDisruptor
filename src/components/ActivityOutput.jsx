@@ -1,6 +1,11 @@
 import { useState } from "react"
 
-
+const getRandomInteger = (min, max) => {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+  
+    return Math.floor(Math.random() * (max - min)) + min
+  }
 
 export function ActivityOutput() {
     const [error, setError] = useState(null)
@@ -11,18 +16,34 @@ export function ActivityOutput() {
     const [kidFriendly, setKidFriendly] = useState(null)
 
     const getRandomData = async () => {
-        const response = await fetch("https://bored-api.appbrewery.com/random", {
+        const selectParticipants = document.getElementById("selectparticipants")
+        const selectCategory = document.getElementById("selectcategory")
+        console.log(selectParticipants.value)
+        console.log(selectCategory.value)
+
+        const response = await fetch(`https://bored-api.appbrewery.com/filter?participants=${selectParticipants.value}&type=${selectCategory.value}`, {
             methods: "GET"
         })
         if (response.ok) {
-            const body = await response.json()
+            const largeBody = await response.json()
+            const body = largeBody[getRandomInteger(0,largeBody.length)]
             console.log(body)
             return body
         }
         else {
-            console.error('Promise resolved but HTTP status failed')
-            const body = {"error": "Aww man, unfortunately the bored API this website uses only takes 100 requests every 15 minutes. You'll just have to be bored for a bit longer!"}
-            return body
+            if (response.status == "404") {
+                const body = {"error": "Oh dear, it looks like there are no activities currently available for this number of participants in this category! Try swapping one of these for results."}
+                return body
+            }
+            else if (response.status == "429") {
+                const body = {"error": "Aww man, unfortunately the bored API this website uses only takes 100 requests every 15 minutes. You'll just have to be bored for a bit longer!"}
+                return body
+            }
+            else {
+                const body = {"error": "An unexpected error occured."}
+                console.log(response.status)
+                return body
+            }
         }
     }
     

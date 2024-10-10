@@ -5,7 +5,7 @@ export function ActivitySelectors() {
         <div id="selectors">
             <div id="participantselect">
                 <label for="participants">Participants:</label>
-                <select name="participants" id="participants">
+                <select name="participants" id="selectparticipants">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -17,7 +17,7 @@ export function ActivitySelectors() {
             </div>
             <div id="typeselect">
                 <label for="category">Category:</label>
-                <select name="category" id="category">
+                <select name="category" id="selectcategory">
                     <option value="social">Social</option>
                     <option value="recreational">Recreational</option>
                     <option value="education">Educational</option>
