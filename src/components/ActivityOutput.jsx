@@ -27,6 +27,8 @@ export function ActivityOutput() {
     }
     
     const onClickHandler = async () => {
+        setError(null)
+        setId(null)
         const body = await getRandomData()
         if (body.error) {
             setError(body.error)
@@ -78,17 +80,33 @@ export function ActivityOutput() {
         )
     }
     else {
-        return (
-            <>
-                <div id="output">
-                    <h3>Select if you would like a solo or couple/group activity & what catgories you like, then click find activity!</h3>
-                </div>
-                <div id="buttondiv">
-                    <button id="search" onClick={onClickHandler}>
-                        Find Activity
-                    </button>
-                </div>
-            </>
-        )
+        if (!activity) {
+            return (
+                <>
+                    <div id="output">
+                        <h3>Select if you would like a solo or couple/group activity & what catgories you like, then click find activity!</h3>
+                    </div>
+                    <div id="buttondiv">
+                        <button id="search" onClick={onClickHandler}>
+                            Find Activity
+                        </button>
+                    </div>
+                </>
+            )
+        }
+        else {
+            return (
+                <>
+                    <div id="output">
+                        <h3>Loading...</h3>
+                    </div>
+                    <div id="buttondiv">
+                        <button id="search" onClick={onClickHandler}>
+                            Find Activity
+                        </button>
+                    </div>
+                </>
+            )
+        }
     }
 }
