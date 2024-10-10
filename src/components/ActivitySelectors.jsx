@@ -1,5 +1,3 @@
-
-
 export function ActivitySelectors() {
     return (
         <div id="selectors">
