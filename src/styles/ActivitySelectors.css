@@ -1,7 +1,8 @@
 #selectors {
     display: flex;
-    width: 30dvw;
-    height: 5dvh;
+    width: 40%;
+    min-height: 5dvh;
+    margin-bottom: 2em;
     align-items: center;
     justify-content: space-evenly;
 }

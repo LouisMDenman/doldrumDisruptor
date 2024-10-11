@@ -1,6 +1,7 @@
 #output {
-    width: 70dvh;
-    height: 60dvh;
+    width: 70%;
+    min-height: 50dvh;
+    margin-bottom: 2em;
     background-color: light-dark(#002147, #F0F0F0);
     border-style: solid;
     border-radius: 8px;
