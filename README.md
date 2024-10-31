@@ -1,6 +1,10 @@
 # CoderAcademy Hackathon Project: Doldrum Disruptor
 
+#### Deployed Site URL (Turn off CORS for functionality, see "An important note on using Doldrum Disruptor" section for more details.)
 https://doldrumdisruptor.netlify.app/
+
+#### Video Presentation
+https://youtu.be/Qk_E2bJQIUE
 
 ## What does Doldrum Disruptor even mean?
 
